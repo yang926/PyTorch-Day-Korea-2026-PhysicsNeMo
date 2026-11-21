@@ -1,0 +1,41 @@
+{
+  "scope": "Single 48-hour forecast initialized from ERA5 on 1 September 2022.",
+  "initial_time_utc": "2022-09-01T00:00:00Z",
+  "forecast_leads_hours": [
+    6,
+    12,
+    18,
+    24,
+    30,
+    36,
+    42,
+    48
+  ],
+  "regions": {
+    "global": "All 720 × 1440 grid cells",
+    "east_asia": {
+      "latitude": [
+        10,
+        55
+      ],
+      "longitude": [
+        100,
+        160
+      ]
+    }
+  },
+  "acceptance": {
+    "finite_all_steps_and_channels": true,
+    "initial_frame_exact": true,
+    "global_and_east_asia_24h_and_48h": {
+      "wind_vector_rmse_m_s_max": 6.0,
+      "mean_sea_level_pressure_rmse_hpa_max": 5.0,
+      "temperature_2m_rmse_kelvin_max": 3.0,
+      "wind_vector_mse_less_than_persistence": true,
+      "pressure_mse_less_than_persistence": true,
+      "temperature_mse_less_than_persistence": true
+    },
+    "all_positive_leads_reported_even_if_some_are_worse_than_persistence": true,
+    "fixed_color_scales_and_no_spatial_alignment": true
+  }
+}
